@@ -1,12 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+
+import Filter from './components/Filter';
+// import Products from './components/Products'
+import ShoppingCart from './components/ShoppingCart';
 
 class App extends React.Component {
-  render()
-  return (
-    
-  );
+  render () {
+    return (
+      <div>
+        <p>HELLO WORLD!</p>
+        <Filter />
+        {/* <Products /> */}
+        <ShoppingCart />
+        <button></button>
+      </div>
+    )
+  }
 }
 
 export default App;

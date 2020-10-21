@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Filter from './components/Filter';
-// import Products from './components/Products'
+import Products from './components/Products'
 import ShoppingCart from './components/ShoppingCart';
 
 class App extends React.Component {
@@ -11,7 +11,7 @@ class App extends React.Component {
       <div>
         <p>HELLO WORLD!</p>
         <Filter />
-        {/* <Products /> */}
+        <Products />
         <ShoppingCart />
         <button></button>
       </div>

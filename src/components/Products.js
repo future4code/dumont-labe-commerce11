@@ -20,7 +20,7 @@ const ProductsGrid = styled.div`
 `
 
 export class Products extends React.Component {
-
+   
     
 
     render () {
@@ -28,10 +28,9 @@ export class Products extends React.Component {
             <ProductsCont>
                 <Header>
                     <p>Quantidade de produtos: {this.props.products.length}</p>
-                    <select>
-                        <option>Nenhum</option>
-                        <option>Menor preço</option>
-                        <option>Maior preço</option>
+                    <select value= {this.props.sort} onChange= {this.props.onChangeSort}>
+                        <option value="crescente">Menor preço</option>
+                        <option value= "decrescente">Maior preço</option>
                     </select>
                 </Header>
 

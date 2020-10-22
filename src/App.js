@@ -64,10 +64,30 @@ const products = [
 
 class App extends React.Component {
   state = {
-    minFilter: '',
-    maxFilter: '',
+    minFilter: '100',
+    maxFilter: '500',
     nameFilter: '',
-    productsList: products
+    productsList: products,
+    sort: "crescente"
+  }
+
+
+  onChangeMinFilter = (event) => {
+    this.setState({
+      minFilter: event.target.value
+    })
+  }
+
+  onChangeMaxFilter = (event) => {
+    this.setState({
+      maxFilter: event.target.value
+    })
+  }
+
+  onChangeNameFilter = (event) => {
+    this.setState({
+      nameFilter: event.target.value
+    })
   }
 
   componentDidMount() {
@@ -99,10 +119,17 @@ class App extends React.Component {
             return true
           }
         })
-              
-    this.setState({ productsList: filteredList })
     
+        .sort((a, b) => this.state.sort === "crescente" ? a.price -b.price : b.price - a.price)    
+    this.setState({ productsList: filteredList })
 }
+
+onChangeSort = (event) => {
+  this.setState({
+    sort: event.target.value
+  })
+}
+
 
   render () {
     return (
@@ -111,6 +138,9 @@ class App extends React.Component {
           minFilter={this.state.minFilter}
           maxFilter={this.state.maxFilter}
           nameFilter={this.state.nameFilter}
+          onChangeMinFilter={this.onChangeMinFilter}
+          onChangeMaxFilter={this.onChangeMaxFilter}
+          onChangeNameFilter={this.onChangeNameFilter}
         />
         <Products 
           products={this.state.productsList}
@@ -118,6 +148,8 @@ class App extends React.Component {
           maxFilter={this.state.maxFilter}
           nameFilter={this.state.nameFilter} 
         />
+
+        
         <ShoppingCart />
       </AppContainer>
     )

@@ -17,32 +17,20 @@ const CardInfo = styled.div`
 `;
 
 const AddButton = styled.button`
-    aligne-self: center;
+    align-self: center;
     margin-top: 4px;
 `
-
-
- 
-
 
 class ProductCard extends React.Component {
     render(){
         const product = this.props.product
         return(
             <CardContainer>
-                {/* <img src={product.image}/>
+                <img src={product.image}/>
                 <CardInfo>
-                <p>{product.item}</p>
-                <p>{product.price}</p>
-                <AddButton>Adicionar ao carrinho</AddButton>
-                </CardInfo> */}
-                
-
-                <img src='https://picsum.photos/200/200?a=1'/>
-                <CardInfo>
-                <p>item: 'Item 1'</p>
-                <p>price: 100,</p>
-                <AddButton>Adicionar ao carrinho</AddButton>
+                    <p>{product.name}</p>
+                    <p>R${product.price},00</p>
+                    <AddButton>Adicionar ao carrinho</AddButton>
                 </CardInfo>
             </CardContainer>
             

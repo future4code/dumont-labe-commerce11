@@ -1,7 +1,26 @@
 import React from "react"
 import ProductCard from "./ProductCard"
+import styled from "styled-components"
 
-class Products extends React.Component {
+
+const ProductsCont = styled.div`
+    
+`
+const Header = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+`
+
+const ProductsGrid = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 10px;
+    padding: 10px;
+`
+
+export class Products extends React.Component {
     state= {
         filter: ""
     }
@@ -15,7 +34,29 @@ class Products extends React.Component {
 
     render () {
         return (
-            <div className={"products-container"}>
+            <ProductsCont>
+                <Header>
+                    <p>Quantidade de produtos: 8</p>
+                    <select value={this.state.filter} onChange={this.onChangeFilter} >
+                        <option value="">Nenhum</option>
+                        <option value="lowestprice">Menor preço</option>
+                        <option value="biggestprice">Maior preço</option>
+                    </select>
+                </Header>
+
+                <ProductsGrid>
+                    <ProductCard/>
+                    <ProductCard/>
+                    <ProductCard/>
+                    <ProductCard/>
+                    <ProductCard/>
+                    <ProductCard/>
+                    <ProductCard/>
+                    <ProductCard/>
+                </ProductsGrid>
+               
+            </ProductsCont>
+           /* <div className={"products-container"}>
                 
                 <div>
                 img src={"https://picsum.photos/200/150/?a=1"}
@@ -66,17 +107,13 @@ class Products extends React.Component {
                 </div>
 
 
-                <select value={this.state.filter} onChange={this.onChangeFilter} >
-                    <option value="">Nenhum</option>
-                    <option value="lowestprice">Menor preço</option>
-                    <option value="biggestprice">Maior preço</option>
-                </select>
+                
 
 
 
 
             </div>
-
+*/
 
 
 
@@ -85,3 +122,6 @@ class Products extends React.Component {
 }// fechamento class
 
 export default Products
+
+
+

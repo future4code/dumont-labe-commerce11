@@ -18,24 +18,18 @@ class Filter extends React.Component {
         return (
             <FilterContainer>
                 <h3>Filtros</h3>
-                <div>
-                    <label>
+                    <InputContainer>
                         Valor Mínimo:
-                        <input type='number' />
-                </label>
-                </div>
-                <div>
-                    <label>
+                        <input type='number' value={this.props.minFilter} />
+                    </InputContainer>
+                    <InputContainer>
                         Valor Máximo:
-                        <input type='number' />
-                    </label>
-                </div>
-                <div>
-                    <label>
+                        <input type='number' value={this.props.maxFilter}/>
+                    </InputContainer>
+                    <InputContainer>
                         Buscar Produto:
-                        <input type='text' />
-                </label>
-                </div>
+                        <input type='text' value={this.props.nameFilter} />
+                    </InputContainer>
             </FilterContainer>
         )
     }

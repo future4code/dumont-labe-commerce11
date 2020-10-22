@@ -2,8 +2,6 @@ import React from "react"
 import ProductCard from './ProductCard'
 import styled from "styled-components"
 
-
-
 const ProductsCont = styled.div`
     
 `
@@ -22,26 +20,18 @@ const ProductsGrid = styled.div`
 `
 
 export class Products extends React.Component {
-    state= {
-        filter: ""
-    }
-    
-    onChangeFilter = (event) => {
-        this.setState({
-            filter: event.target.value
-        })
-    }
 
+    
 
     render () {
         return (
             <ProductsCont>
                 <Header>
-                    <p>Quantidade de produtos: 8</p>
-                    <select value={this.state.filter} onChange={this.onChangeFilter} >
-                        <option value="">Nenhum</option>
-                        <option value="lowestprice">Menor preço</option>
-                        <option value="biggestprice">Maior preço</option>
+                    <p>Quantidade de produtos: {this.props.products.length}</p>
+                    <select>
+                        <option>Nenhum</option>
+                        <option>Menor preço</option>
+                        <option>Maior preço</option>
                     </select>
                 </Header>
 
@@ -49,7 +39,6 @@ export class Products extends React.Component {
                     {this.props.products.map((product) => {
                         return <ProductCard product = {product}/>
                     })}
-                    
                 </ProductsGrid>
                
             </ProductsCont>

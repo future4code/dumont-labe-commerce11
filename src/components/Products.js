@@ -3,6 +3,7 @@ import ProductCard from "./ProductCard"
 import styled from "styled-components"
 
 
+
 const ProductsCont = styled.div`
     
 `
@@ -45,6 +46,9 @@ export class Products extends React.Component {
                 </Header>
 
                 <ProductsGrid>
+                    {/* {this.props.products.map((product) => {
+                        return <ProductCard product = {product}/>
+                    })} */}
                     <ProductCard/>
                     <ProductCard/>
                     <ProductCard/>

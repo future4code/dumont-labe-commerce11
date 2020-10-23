@@ -64,11 +64,11 @@ const products = [
 
 class App extends React.Component {
   state = {
-    minFilter: '100',
-    maxFilter: '600',
+    minFilter: '',
+    maxFilter: '',
     nameFilter: '',
     productsList: products,
-    sort: "decreasing",
+    sort: "increasing",
     productsInCart: [
       {
         id: 6,

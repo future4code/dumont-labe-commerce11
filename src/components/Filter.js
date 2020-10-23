@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
 const FilterContainer = styled.div`
     border: 1px solid black;
@@ -17,22 +17,22 @@ class Filter extends React.Component {
     render() {
         return (
             <FilterContainer>
-                 <h3>Filtros</h3>
-                <InputContainer>
-                    Valor Mínimo:
-                    <input type='number' value={this.props.minFilter} />
-                </InputContainer>
-                
-                <InputContainer>
-                    Valor Máximo:
-                    <input type='number' value={this.props.maxFilter} />
+                <h3>Filtros</h3>
+                    <InputContainer>
+                        Valor Mínimo:
+                        <input type='number' value={this.props.minFilter} onChange={this.props.onChangeMinFilter} />
                     </InputContainer>
-                <InputContainer>
+                    <InputContainer>
+                        Valor Máximo:
+                        <input type='number' value={this.props.maxFilter} onChange={this.props.onChangeMaxFilter}/>
+                    </InputContainer>
+                    <InputContainer>
                         Buscar Produto:
-                        <input type='text' value={this.props.nameFilter} />
-                </InputContainer>
+                        <input type='text' value={this.props.nameFilter} onChange={this.onChangeNameFilter} />
+                    </InputContainer>
             </FilterContainer>
         )
     }
 }
+
 export default Filter

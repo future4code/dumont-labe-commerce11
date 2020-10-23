@@ -28,7 +28,7 @@ class Filter extends React.Component {
                     </InputContainer>
                     <InputContainer>
                         Buscar Produto:
-                        <input type='text' onChange={this.onChangeNameFilter} />
+                        <input type='text' onChange={this.props.onChangeNameFilter} />
                     </InputContainer>
             </FilterContainer>
         )

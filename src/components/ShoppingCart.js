@@ -33,4 +33,4 @@ class ShoppingCart extends React.Component {
         )
     }
 }
-export default ShoppingCart
+export default ShoppingCart;

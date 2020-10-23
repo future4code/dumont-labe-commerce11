@@ -68,7 +68,31 @@ class App extends React.Component {
     maxFilter: '600',
     nameFilter: '',
     productsList: products,
-    sort: "decreasing"
+    sort: "decreasing",
+    productsInCart: [
+      {
+        id: 6,
+        image: 'https://picsum.photos/200/200?a=6',
+        name: 'Produto 6',
+        price: 600,
+        quantity: 1
+      },
+      {
+        id: 7,
+        image: 'https://picsum.photos/200/200?a=7',
+        name: 'Produto 7',
+        price: 700,
+        quantity: 1
+      },
+      {
+        id: 8,
+        image: 'https://picsum.photos/200/200?a=8',
+        name: 'Produto 8',
+        price: 800,
+        quantity: 1
+      },
+    ]
+
   }
 
 
@@ -159,7 +183,8 @@ onChangeSort = (event) => {
         />
 
         
-        <ShoppingCart />
+        <ShoppingCart productsInCart = {this.state.productsInCart}  />
+
       </AppContainer>
     )
   }  

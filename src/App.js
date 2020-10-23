@@ -15,7 +15,7 @@ const products = [
   {
     id: 1,
     image: 'https://picsum.photos/200/200?a=1',
-    name: 'Produto 1',
+    name: 'maracuja 1',
     price: 100
   },
   {
@@ -65,10 +65,10 @@ const products = [
 class App extends React.Component {
   state = {
     minFilter: '100',
-    maxFilter: '500',
+    maxFilter: '600',
     nameFilter: '',
     productsList: products,
-    sort: "crescente"
+    sort: "decreasing"
   }
 
 
@@ -90,7 +90,7 @@ class App extends React.Component {
     })
   }
 
-  componentDidMount() {
+   componentDidMount() {
     this.getFilteredAndOrderedList()
   }
 
@@ -120,11 +120,18 @@ class App extends React.Component {
           }
         })
     
-        .sort((a, b) => this.state.sort === "crescente" ? a.price -b.price : b.price - a.price)    
-    this.setState({ productsList: filteredList })
+        .sort((a, b) => this.state.sort === "increasing" ? a.value - b.price : b.price - a.price)    
+        
+        return (
+          filteredList
+        )
+   // this.setState({ productsList: filteredList })
+    //console.log(this.state.sort)
 }
 
+
 onChangeSort = (event) => {
+  console.log("teste")
   this.setState({
     sort: event.target.value
   })
@@ -143,10 +150,12 @@ onChangeSort = (event) => {
           onChangeNameFilter={this.onChangeNameFilter}
         />
         <Products 
-          products={this.state.productsList}
+          products={this.getFilteredAndOrderedList()}
           minFilter={this.state.minFilter}
           maxFilter={this.state.maxFilter}
           nameFilter={this.state.nameFilter} 
+          sort={this.state.sort}
+          onChangeSort={this.onChangeSort}
         />
 
         

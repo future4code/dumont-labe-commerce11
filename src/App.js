@@ -72,23 +72,9 @@ class App extends React.Component {
   }
 
 
-  onChangeMinFilter = (event) => {
-    this.setState({
-      minFilter: event.target.value
-    })
-  }
+  
 
-  onChangeMaxFilter = (event) => {
-    this.setState({
-      maxFilter: event.target.value
-    })
-  }
-
-  onChangeNameFilter = (event) => {
-    this.setState({
-      nameFilter: event.target.value
-    })
-  }
+  
 
   componentDidMount() {
     this.getFilteredAndOrderedList()
@@ -124,11 +110,7 @@ class App extends React.Component {
     this.setState({ productsList: filteredList })
 }
 
-onChangeSort = (event) => {
-  this.setState({
-    sort: event.target.value
-  })
-}
+
 
 
   render () {

@@ -28,7 +28,7 @@ export class Products extends React.Component {
             <ProductsCont>
                 <Header>
                     <p>Quantidade de produtos: {this.props.products.length}</p>
-                    <select value= {this.props.sort} onChange= {this.props.onChangeSort}>
+                    <select value= {this.props.sort}>
                         <option value="crescente">Menor preço</option>
                         <option value= "decrescente">Maior preço</option>
                     </select>

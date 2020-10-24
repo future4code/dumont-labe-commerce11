@@ -36,7 +36,11 @@ export class Products extends React.Component {
 
                 <ProductsGrid>
                     {this.props.products.map((product) => {
-                        return <ProductCard product = {product}/>
+                        return <ProductCard product = {product}
+                        cart={this.props.cart}
+                        addProduct={this.props.addProduct}
+                        totalValue={this.props.totalValue}
+                        />
                     })}
                 </ProductsGrid>
                

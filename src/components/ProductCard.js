@@ -2,9 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 
 const CardContainer = styled.div`
-    border: 1px solid black;
-    /* display: flex;
-    flex-direction: column */
+    border: 1px dotted white;
 `
 
 const PlanetsPictures = styled.img`

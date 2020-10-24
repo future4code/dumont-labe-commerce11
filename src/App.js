@@ -16,49 +16,57 @@ const products = [
     id: 1,
     image: 'https://picsum.photos/200/200?a=1',
     name: 'maracuja 1',
-    price: 100
+    price: 100,
+    quantity: 0
   },
   {
     id: 2,
     image: 'https://picsum.photos/200/200?a=2',
     name: 'Produto 2',
-    price: 200
+    price: 200,
+    quantity:0
   },
   {
     id: 3,
     image: 'https://picsum.photos/200/200?a=3',
     name: 'Produto 3',
-    price: 300
+    price: 300,
+    quantity: 0
   },
   {
     id: 4,
     image: 'https://picsum.photos/200/200?a=4',
     name: 'Produto 4',
-    price: 400
+    price: 400,
+    quantity: 0
   },
   {
     id: 5,
     image: 'https://picsum.photos/200/200?a=5',
     name: 'Produto 5',
-    price: 500
+    price: 500,
+    quantity: 0
   },
   {
     id: 6,
     image: 'https://picsum.photos/200/200?a=6',
     name: 'Produto 6',
-    price: 600
+    price: 600,
+    quantity: 0
   },
   {
     id: 7,
     image: 'https://picsum.photos/200/200?a=7',
     name: 'Produto 7',
-    price: 700
+    price: 700,
+    quantity: 0
   },
   {
     id: 8,
     image: 'https://picsum.photos/200/200?a=8',
     name: 'Produto 8',
-    price: 800
+    price: 800,
+    quantity: 0
   },
 ]
 const newProduct= [...products]

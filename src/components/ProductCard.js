@@ -30,7 +30,7 @@ class ProductCard extends React.Component {
                 <CardInfo>
                     <p>{product.name}</p>
                     <p>R${product.price},00</p>
-                    <AddButton>Adicionar ao carrinho</AddButton>
+                    <AddButton onClick={()=>this.props.addProduct(product.id,product.image,product.name,product.price)}>Adicionar ao carrinho</AddButton>
                 </CardInfo>
             </CardContainer>
             
@@ -40,3 +40,4 @@ class ProductCard extends React.Component {
 }
 
 export default ProductCard
+

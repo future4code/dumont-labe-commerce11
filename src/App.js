@@ -3,69 +3,81 @@ import styled from 'styled-components';
 import Filter from './components/Filter';
 import Products from './components/Products'
 import ShoppingCart from './components/ShoppingCart';
+import mercury from './img/mercury.jpg';
+import venus from './img/venus.jpg';
+import mars from './img/mars.jpg';
+import jupiter from './img/jupiter.jpg';
+import saturn from './img/saturn.png';
+import uranus from './img/uranus.jpg';
+import neptune from './img/neptune.jpg';
+import pluto from './img/pluto.jpeg';
+import space from './img/space.jpg'
+
 
 
 
 const AppContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
+  background-image: linear-gradient(to bottom, #020a16, #010c20, #020e2a, #040e33, #0b0d3b);
+  color: white;
 `
 
 const products = [
   {
     id: 1,
-    image: 'https://picsum.photos/200/200?a=1',
-    name: 'maracuja 1',
-    price: 100,
+    image: mercury,
+    name: 'Mercúrio',
+    price: 1000000,
     quantity: 0
   },
   {
     id: 2,
-    image: 'https://picsum.photos/200/200?a=2',
-    name: 'Produto 2',
-    price: 200,
+    image: venus,
+    name: 'Vênus',
+    price: 1000000,
     quantity:0
   },
   {
     id: 3,
-    image: 'https://picsum.photos/200/200?a=3',
-    name: 'Produto 3',
-    price: 300,
+    image: mars,
+    name: 'Marte',
+    price: 1000000,
     quantity: 0
   },
   {
     id: 4,
-    image: 'https://picsum.photos/200/200?a=4',
-    name: 'Produto 4',
-    price: 400,
+    image: jupiter,
+    name: 'Júpiter',
+    price: 1500000,
     quantity: 0
   },
   {
     id: 5,
-    image: 'https://picsum.photos/200/200?a=5',
-    name: 'Produto 5',
-    price: 500,
+    image: saturn,
+    name: 'Saturno',
+    price: 2000000,
     quantity: 0
   },
   {
     id: 6,
-    image: 'https://picsum.photos/200/200?a=6',
-    name: 'Produto 6',
-    price: 600,
+    image: uranus,
+    name: 'Urano',
+    price: 2500000,
     quantity: 0
   },
   {
     id: 7,
-    image: 'https://picsum.photos/200/200?a=7',
-    name: 'Produto 7',
-    price: 700,
+    image: neptune,
+    name: 'Netuno',
+    price: 3000000,
     quantity: 0
   },
   {
     id: 8,
-    image: 'https://picsum.photos/200/200?a=8',
-    name: 'Produto 8',
-    price: 800,
+    image: pluto,
+    name: 'Plutão',
+    price: 4000000,
     quantity: 0
   },
 ]

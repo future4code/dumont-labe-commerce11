@@ -18,8 +18,10 @@ display:flex;
 flex-direction:column;
 `
 const CartImage = styled.img`
-height:40px;
-width:40px;
+max-height:40px;
+max-width:40px;
+height: auto;
+width: auto;
 `
 
 

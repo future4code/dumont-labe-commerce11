@@ -3,7 +3,15 @@ import styled from 'styled-components';
 
 const CardContainer = styled.div`
     border: 1px solid black;
+    /* display: flex;
+    flex-direction: column */
+`
 
+const PlanetsPictures = styled.img`
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
 `
 
 const CardInfo = styled.div`
@@ -26,7 +34,7 @@ class ProductCard extends React.Component {
         const product = this.props.product
         return(
             <CardContainer>
-                <img src={product.image}/>
+                <PlanetsPictures src={product.image}/>
                 <CardInfo>
                     <p>{product.name}</p>
                     <p>R${product.price},00</p>

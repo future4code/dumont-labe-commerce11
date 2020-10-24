@@ -61,6 +61,9 @@ const products = [
     price: 800
   },
 ]
+const newProduct= [...products]
+
+
 
 class App extends React.Component {
   state = {
@@ -69,29 +72,9 @@ class App extends React.Component {
     nameFilter: '',
     productsList: products,
     sort: "increasing",
-    productsInCart: [
-      {
-        id: 6,
-        image: 'https://picsum.photos/200/200?a=6',
-        name: 'Produto 6',
-        price: 600,
-        quantity: 1
-      },
-      {
-        id: 7,
-        image: 'https://picsum.photos/200/200?a=7',
-        name: 'Produto 7',
-        price: 700,
-        quantity: 1
-      },
-      {
-        id: 8,
-        image: 'https://picsum.photos/200/200?a=8',
-        name: 'Produto 8',
-        price: 800,
-        quantity: 1
-      },
-    ]
+    productsInCart: [],
+    totalValue: 0,
+
 
   }
 
@@ -160,8 +143,39 @@ onChangeSort = (event) => {
     sort: event.target.value
   })
 }
-
-
+ addProduct = (newId,newImage,newName,newPrice) => {
+   newProduct.map((product) => {
+     if (newId === product.id){
+      product.quantity +=1
+      this.setState({
+        totalValue: product.price + this.state.totalValue
+      })
+     }
+     let newCart = newProduct.filter(function(param){
+       return param.quantity > 0;
+     })
+     this.setState({
+       productsInCart: newCart
+     })
+   })
+ }
+removeCart = (cart) => {
+  newProduct.map((product)=>{
+    if(cart.id === product.id){
+      product.quantity -=1
+      this.setState({
+        totalValue:this.state.totalValue - cart.price
+      })
+    }
+    let newCart = newProduct.filter(function(param){
+      return param.quantity > 0;
+    })
+    this.setState({
+      productsInCart: newCart
+    })
+    
+  })
+}
   render () {
     return (
       <AppContainer>
@@ -180,10 +194,16 @@ onChangeSort = (event) => {
           nameFilter={this.state.nameFilter} 
           sort={this.state.sort}
           onChangeSort={this.onChangeSort}
+          addProduct = {this.addProduct}
+          totalValue={this.props.totalValue}
+          cart={this.state.productsInCart}
         />
 
         
-        <ShoppingCart productsInCart = {this.state.productsInCart}  />
+        <ShoppingCart products = {this.state.products} 
+          cart={this.state.productsInCart} 
+          removeCart={this.removeCart}
+          totalValue={this.state.totalValue}/>
 
       </AppContainer>
     )

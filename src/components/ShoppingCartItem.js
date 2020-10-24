@@ -16,10 +16,16 @@ class ShoppingCartItem extends React.Component{
 render () {
     return (
         <Item>
-           <p>{this.props.cartItem.quantity}</p>
-           <p>{this.props.cartItem.name}</p>
-           <button>Remover</button>
+            {this.props.cart.map((product)=>{
+                return(<Item>
+                
+                        <img src = {product.image}/>
+                        <h4>{product.quantity}:{product.name}:R${product.price},00</h4>
+                        <button onClick={() => this.props.removeCart(product)}>Remover</button>
+                    </Item>
+            )})}
         </Item>
+            
     )//fechamento return do render
 }//fechamento render
 } //fechamento class

@@ -4,7 +4,6 @@ import ShoppingCartItem from './ShoppingCartItem';
 
 
 const ShoppingCartContainer = styled.div`
-    border: 1px solid black;
     padding: 8px;
 `;
 const CartlistContainer = styled.div`

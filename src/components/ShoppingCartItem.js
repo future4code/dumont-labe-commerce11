@@ -6,7 +6,7 @@ const ItemContainer = styled.div`
     flex-direction:column;
     justify-content: space-evenly;
     align-items: center;
-    border-bottom: 1px dashed black;
+    border-bottom: 1px dotted white;
     
 `
 const Item = styled.div`

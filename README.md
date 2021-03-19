@@ -82,7 +82,7 @@ Agora é só testar em seu navegador!
 
 <a href="https://www.linkedin.com/in/bianca-cmendes/" target="_blank">***Bianca Mendes***</a>
 <br/> 
-<>***Kelly Knoblauch***</a>
+***Kelly Knoblauch***
 <br/> 
 <a href="https://www.linkedin.com/in/azzinogueiramarina/" target="_blank">***Marina Azzi***</a>
 <br/> 

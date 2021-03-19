@@ -15,7 +15,8 @@ Primeiro projeto em grupo de Frontend da Labenu. A ideia foi desenvolver uma loj
 
 ## 🖥 Link do Surge
 <h3>
-<a href="http://oafish-design.surge.sh/" target="_blank">Acessar: LabeCommerce</a>
+ 
+<a href="http://wacky-ground.surge.sh/" target="_blank">Acessar: LabeCommerce</a>
 </h3>
 
 
